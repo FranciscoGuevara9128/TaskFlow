@@ -61,7 +61,7 @@ class TaskViewModel : ViewModel() {
     }
 
     // Guarda una tarea nueva o edita una existente
-    fun guardarTarea() {
+    fun guardarTask() {
         if (titulo.isBlank() || prioridad.isBlank()) return
 
         val idActual = id.toIntOrNull()
