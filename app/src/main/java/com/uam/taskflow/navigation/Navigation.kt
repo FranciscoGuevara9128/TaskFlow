@@ -2,7 +2,10 @@ package com.uam.taskflow.navigation
 
 import kotlinx.serialization.Serializable
 
-@kotlinx.serialization.Serializable
+@Serializable
+object Splash
+
+@Serializable
 object TaskList
 
 @Serializable

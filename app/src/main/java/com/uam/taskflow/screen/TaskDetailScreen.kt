@@ -94,7 +94,7 @@ fun TaskDetailScreen(
                     value = viewModel.prioridad,
                     onValueChange = { viewModel.onPrioridadChange(it) },
                     modifier = Modifier.fillMaxWidth(),
-                    label = { Text("Prioridad (ej. 1, 2, 3)") },
+                    label = { Text("Prioridad: 1 al 3") },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     leadingIcon = {
                         Icon(

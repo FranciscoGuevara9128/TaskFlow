@@ -13,10 +13,13 @@ class TaskRepository {
     )
 
     // READ]
-    fun getTareas(): List<Task> = tareas.toList()
+    fun getTareas(): List<Task> = tareas.toList().sortedBy {it.prioridad}
 
     // CREATE
-    fun addTask(tarea: Task): Boolean = tareas.add(tarea)
+    fun addTask(tarea: Task): Boolean {
+        if(tarea.prioridad !in 1..3) return false
+        return tareas.add(tarea)
+    }
 
     // READ
     fun getTaskById(id: Int): Task? = tareas.find { it.id == id }
