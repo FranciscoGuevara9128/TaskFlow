@@ -26,6 +26,9 @@ class TaskRepository {
 
     // UPDATE
     fun editTask(id: Int, nuevoTitulo: String, nuevaPrioridad: Int, nuevoEstado: Boolean): Boolean {
+        // Validación de prioridad
+        if (nuevaPrioridad !in 1..3) return false
+
         val tareaOriginal = tareas.find { it.id == id } ?: return false
         val index = tareas.indexOf(tareaOriginal)
 
