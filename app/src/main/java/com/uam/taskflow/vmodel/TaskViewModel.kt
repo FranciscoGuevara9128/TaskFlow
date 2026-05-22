@@ -17,7 +17,7 @@ class TaskViewModel : ViewModel() {
         private set
     var titulo by mutableStateOf("")
         private set
-    var prioridad by mutableStateOf("") // Lo manejamos como String en el input del formulario
+    var prioridad by mutableStateOf("")
         private set
     var estado by mutableStateOf(false)
         private set
