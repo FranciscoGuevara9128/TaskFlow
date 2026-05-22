@@ -17,7 +17,7 @@ class TaskViewModel : ViewModel() {
         private set
     var titulo by mutableStateOf("")
         private set
-    var prioridad by mutableStateOf("") // Lo manejamos como String en el input del formulario
+    var prioridad by mutableStateOf("")
         private set
     var estado by mutableStateOf(false)
         private set
@@ -61,7 +61,7 @@ class TaskViewModel : ViewModel() {
     }
 
     // Guarda una tarea nueva o edita una existente
-    fun guardarTarea() {
+    fun guardarTask() {
         if (titulo.isBlank() || prioridad.isBlank()) return
 
         val idActual = id.toIntOrNull()
