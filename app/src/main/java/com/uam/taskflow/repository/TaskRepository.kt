@@ -12,14 +12,12 @@ class TaskRepository {
         )
     )
 
-    // READ
-    // Devuelve las tareas ordenadas por prioridad ascendente (1 = mayor prioridad)
-    fun getTareas(): List<Task> = tareas.toList().sortedBy { it.prioridad }
+    // READ]
+    fun getTareas(): List<Task> = tareas.toList().sortedBy {it.prioridad}
 
     // CREATE
-    // Solo permite prioridades válidas: 1, 2 o 3
     fun addTask(tarea: Task): Boolean {
-        if (tarea.prioridad !in 1..3) return false
+        if(tarea.prioridad !in 1..3) return false
         return tareas.add(tarea)
     }
 

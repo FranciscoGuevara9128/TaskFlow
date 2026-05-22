@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.uam.taskflow.screen.SplashScreen
 import com.uam.taskflow.screen.TaskDetailScreen
 import com.uam.taskflow.screen.TaskListScreen
 import com.uam.taskflow.vmodel.TaskViewModel
@@ -18,9 +19,14 @@ fun AppNavigation(modifier: Modifier = Modifier) {
 
     NavHost(
         navController = navController,
-        startDestination = TaskList,
+        startDestination = Splash,
         modifier = modifier
     ) {
+
+        composable<Splash> {
+            SplashScreen(navController = navController)
+        }
+
         // 1. Pantalla del Listado de Tareas
         composable<TaskList> { backStackEntry ->
             val taskViewModel: TaskViewModel = viewModel(backStackEntry)
